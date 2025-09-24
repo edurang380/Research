@@ -5,49 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
-                body {
+        body {
             font-family: monospace;
             text-align: left;
             margin-top: 40px;
             font-weight: bolder;
         }
-                h1 {
-                    font-size: 20px;
-                }
-                
-                .dotted-line {
-        border-top: 2px dashed #393838; /* Adjust color & thickness */
-        margin-top: 50px; /* Adds space above & below */
-                }
-                .textcvright {
-                    text-align:left;
-                    font-size: 15px;
-                    margin-left: 30px;
-                    font-weight: bolder;
-                    margin-bottom: 10px;    
-                    
-                }
-                .normaltext {
-                    font-size:15px;
-                    margin-left: 30px;
-                    font-weight: bolder;
-                }
-                a {
-    color: black;
-    text-decoration: none;
-}
+        
+        h1 {
+            font-size: 20px;
+        }
+        
+        .dotted-line {
+            border-top: 2px dashed #393838;
+            margin-top: 50px;
+        }
+        
+        .textcvright {
+            text-align: left;
+            font-size: 15px;
+            margin-left: 30px;
+            font-weight: bolder;
+            margin-bottom: 10px;    
+        }
+        
+        .normaltext {
+            font-size: 15px;
+            margin-left: 30px;
+            font-weight: bolder;
+        }
+        
+        /* New styles for the two-column layout */
+        .portfolio-container {
+            display: flex;
+            gap: 50px; /* Adjust spacing between columns */
+            align-items: flex-start;
+        }
+        
+        .portfolio-column {
+            flex: 1; /* Equal width columns */
+            min-height: 150px; /* Adjust as needed */
+        }
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
 
-/* Keep it black even after it has been clicked */
-a:visited {
-    color: black;
-}
+        a:visited {
+            color: black;
+        }
 
-/* On hover, keep black text but add underline (or other effect) */
-a:hover {
-    color: black; /* still black */
-    text-decoration: underline; /* could also use bold, background, etc. */
-}
-    
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -56,14 +68,24 @@ a:hover {
         <a href="TNXP_report.pdf" target="_blank"> Tonmya's potential to be a 500mln drug </a>
     </div>
     <div class="dotted-line"></div>
-    <h1>> LONGS</h1>
-    <div style="flex-direction: row;">
-    <div class="textcvright"> PBR &nbsp;</div>
-    <div class="textcvright"> TNXP &nbsp; </div>
-    <div class="textcvright"> SRPT &nbsp; </div>
-    <div class="dotted-line"></div>
-
-
     
+    <!-- Updated two-column layout -->
+    <div class="portfolio-container">
+        <div class="portfolio-column">
+            <h1>> LONGS</h1>
+            <div class="textcvright"> PBR &nbsp;</div>
+            <div class="textcvright"> TNXP &nbsp;</div>
+            <div class="textcvright"> SRPT &nbsp;</div>
+        </div>
+        
+        <div class="portfolio-column">
+            <h1>> SHORTS</h1>
+            <div class="textcvright"> IONQ &nbsp;</div>
+            <div class="textcvright"> AVXL &nbsp;</div>
+            <div class="textcvright"> OPEN &nbsp;</div>
+        </div>
+    </div>
+    
+    <div class="dotted-line"></div>
 </body>
 </html>
